@@ -11,22 +11,19 @@
 ### 2: Initialize a Git repository, and commit the README and `.gitignore`
 
 ### 3: Commit throughout the assignment
-
 ------------------------------------------------------------------------
 
 ## Part B: Basic shell scripts
 
 ### 4: Predict the output of `echo.sh`
 
-<!-- No need to paste the script: we'll look at scripts/echo.sh directly. -->
+* I predict that the script will print information corresponding to October 7 * (prediction and reasoning for `bash scripts/echo.sh Oct07 Oct08`):
 
-*Answer* (prediction and reasoning for `bash scripts/echo.sh Oct07 Oct08`):
+*I predict that the script will print information corresponding to October 8* (prediction and reasoning for `bash scripts/echo.sh Oct07 Oct08 Oct09 Oct10`):
 
-*Answer* (prediction and reasoning for `bash scripts/echo.sh Oct07 Oct08 Oct09 Oct10`):
+*I predict that the script will print the same information as the previous command, corresponding to October 9* (prediction and reasoning for `bash scripts/echo.sh Oct07 Oct08 "Oct09 Oct10"`):
 
-*Answer* (prediction and reasoning for `bash scripts/echo.sh Oct07 Oct08 "Oct09 Oct10"`):
-
-*Answer* (prediction and reasoning for `bash scripts/echo.sh results/fastqc/*.html`):
+* I predict that the script will finish and does not to print anything.* (prediction and reasoning for `bash scripts/echo.sh results/fastqc/*.html`):
 
 ### 5: Run `echo.sh` and compare with your predictions
 
@@ -34,9 +31,11 @@
 bash scripts/echo.sh Oct07 Oct08
 ```
 
-The output of the command was:
+The output of the command was:  
 
-```         
+```Oct07
+Oct08
+scripts/echo.sh: line 6: $3: unbound variable         
 ```
 
 ```bash
@@ -45,7 +44,10 @@ bash scripts/echo.sh Oct07 Oct08 Oct09 Oct10
 
 The output of the command was:
 
-```         
+```Oct07
+Oct08
+Oct09
+Finished         
 ```
 
 ```bash
@@ -54,7 +56,10 @@ bash scripts/echo.sh Oct07 Oct08 "Oct09 Oct10"
 
 The output of the command was:
 
-```         
+```Oct07
+Oct08
+Oct09 Oct10
+Finished         
 ```
 
 ```bash
@@ -63,10 +68,13 @@ bash scripts/echo.sh results/fastqc/*.html
 
 The output of the command was:
 
-```         
+```results/fastqc/S63_R1_fastqc.html
+results/fastqc/S63_R2_fastqc.html
+results/fastqc/S64_R1_fastqc.html
+Finished         
 ```
 
-*Answer*: Which output (if any) differed from your prediction, and why?
+*All my predictions were different from the actual outputs because I initially misunderstood how Bash handles arguments.*: Which output (if any) differed from your prediction, and why?
 
 ### 6: Write the `printline.sh` script
 
