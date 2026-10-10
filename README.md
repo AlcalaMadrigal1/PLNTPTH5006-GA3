@@ -110,41 +110,35 @@ The output of the command that checks the file contents was:
 
 ### 8: Get a MultiQC container link
 
-*Answer*: The container link (URI) is:
+*Answer*: The container link (URI) is: oras://community.wave.seqera.io/library/multiqc:1.35--562c547b518ebe20
 
 ### 9: MultiQC's help info, and the MultiQC command
 
 Code to run `multiqc --help` with the container:
 
 ```bash
-# Your command:
+# Your command:apptainer exec oras://community.wave.seqera.io/library/multiqc:1.35--562c547b518ebe20 multiqc --help
 ```
-
-<!-- You don't need to paste the MultiQC help output -->
 
 The MultiQC command to run MultiQC on `results/fastqc` with output in `results/multiqc`:
 
 ```bash
-# Your command:
+# Your command:apptainer exec oras://community.wave.seqera.io/library/multiqc:1.35--562c547b518ebe20 multiqc results/fastqc -o results/multiqc
 ```
 
 ### 10: Write the `multiqc.sh` script
-
-<!-- No need to paste the script: we'll look at scripts/multiqc.sh directly. -->
 
 ### 11: Run `multiqc.sh`
 
 Code to run the script:
 
 ```bash
-# Your command:
+bash scripts/multiqc.sh
 ```
 
-<!-- You don't need to paste the MultiQC logging output -->
+*Answer*: 44
 
-*Answer*: Number of FastQC reports MultiQC found:
-
-*Answer*: Does that match what you expected? Why/why not?
+*Answer*: Does that match what you expected? Why/why not? Yes, because we had 44 HTML files, each corresponding to one FastQC report.
 
 ### 12: Make `multiqc.sh` accept arguments, and rerun it
 
