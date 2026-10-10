@@ -78,30 +78,30 @@ Finished
 
 ### 6: Write the `printline.sh` script
 
-<!-- No need to paste the script: we'll look at scripts/printline.sh directly. -->
 
 ### 7: Test `printline.sh` twice
 
 Test 1:
 
 ```bash
-# Your command:
+bash scripts/printline.sh data/metadata.tsv 2
 ```
 
 The output of the command was:
 
-```         
+```
+ S82     10dpi   cathemerium        
 ```
 
 Test 2 (with redirection), and checking the contents of the output file:
 
 ```bash
-# Your command:
+bash scripts/printline.sh data/metadata.tsv 3 > results/printline_test.txt
 ```
 
 The output of the command that checks the file contents was:
 
-```         
+```S75     10dpi   cathemerium         
 ```
 
 ------------------------------------------------------------------------
