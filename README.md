@@ -1,6 +1,6 @@
 
 
-# GA3 answers - <Antonio Alcala Madrigal>
+# GA3 answers - Antonio Alcala Madrigal
 
 ------------------------------------------------------------------------
 
@@ -17,13 +17,13 @@
 
 ### 4: Predict the output of `echo.sh`
 
-* I predict that the script will print information corresponding to October 7 * (prediction and reasoning for `bash scripts/echo.sh Oct07 Oct08`):
+*I predict that the script will print information corresponding to October 7* (prediction and reasoning for `bash scripts/echo.sh Oct07 Oct08`):
 
 *I predict that the script will print information corresponding to October 8* (prediction and reasoning for `bash scripts/echo.sh Oct07 Oct08 Oct09 Oct10`):
 
 *I predict that the script will print the same information as the previous command, corresponding to October 9* (prediction and reasoning for `bash scripts/echo.sh Oct07 Oct08 "Oct09 Oct10"`):
 
-* I predict that the script will finish and does not to print anything.* (prediction and reasoning for `bash scripts/echo.sh results/fastqc/*.html`):
+*I predict that the script will finish and does not to print anything* (prediction and reasoning for `bash scripts/echo.sh results/fastqc/*.html`):
 
 ### 5: Run `echo.sh` and compare with your predictions
 
@@ -33,7 +33,8 @@ bash scripts/echo.sh Oct07 Oct08
 
 The output of the command was:  
 
-```Oct07
+```
+Oct07
 Oct08
 scripts/echo.sh: line 6: $3: unbound variable         
 ```
@@ -44,7 +45,8 @@ bash scripts/echo.sh Oct07 Oct08 Oct09 Oct10
 
 The output of the command was:
 
-```Oct07
+```
+Oct07
 Oct08
 Oct09
 Finished         
@@ -56,7 +58,8 @@ bash scripts/echo.sh Oct07 Oct08 "Oct09 Oct10"
 
 The output of the command was:
 
-```Oct07
+```
+Oct07
 Oct08
 Oct09 Oct10
 Finished         
@@ -68,7 +71,8 @@ bash scripts/echo.sh results/fastqc/*.html
 
 The output of the command was:
 
-```results/fastqc/S63_R1_fastqc.html
+```
+results/fastqc/S63_R1_fastqc.html
 results/fastqc/S63_R2_fastqc.html
 results/fastqc/S64_R1_fastqc.html
 Finished         
@@ -101,7 +105,8 @@ bash scripts/printline.sh data/metadata.tsv 3 > results/printline_test.txt
 
 The output of the command that checks the file contents was:
 
-```S75     10dpi   cathemerium         
+```
+S75     10dpi   cathemerium         
 ```
 
 ------------------------------------------------------------------------
@@ -117,13 +122,13 @@ The output of the command that checks the file contents was:
 Code to run `multiqc --help` with the container:
 
 ```bash
-# Your command:apptainer exec oras://community.wave.seqera.io/library/multiqc:1.35--562c547b518ebe20 multiqc --help
+apptainer exec oras://community.wave.seqera.io/library/multiqc:1.35--562c547b518ebe20 multiqc --help
 ```
 
 The MultiQC command to run MultiQC on `results/fastqc` with output in `results/multiqc`:
 
 ```bash
-# Your command:apptainer exec oras://community.wave.seqera.io/library/multiqc:1.35--562c547b518ebe20 multiqc results/fastqc -o results/multiqc
+apptainer exec oras://community.wave.seqera.io/library/multiqc:1.35--562c547b518ebe20 multiqc results/fastqc -o results/multiqc
 ```
 
 ### 10: Write the `multiqc.sh` script
@@ -138,7 +143,8 @@ bash scripts/multiqc.sh
 
 *Answer*: 44
 
-*Answer*: Does that match what you expected? Why/why not? Yes, because we had 44 HTML files, each corresponding to one FastQC report.
+Does that match what you expected? Why/why not? 
+Yes, because we had 44 HTML files, each corresponding to one FastQC report.
 
 ### 12: Make `multiqc.sh` accept arguments, and rerun it
 
@@ -186,15 +192,12 @@ pandoc -o README.html README.md
 
 ### 18: Create a GitHub repository
 
-<!-- No command/output needed here -- we check your GitHub repo directly. -->
 
 ### 19: Connect your local repo to GitHub, and push
 
-<!-- No command/output needed here -- we check your GitHub repo directly. -->
 
 ### 20: Create an Issue to tag the instructors
 
-<!-- No command/output needed here -- we check your GitHub repo directly. -->
 
 ------------------------------------------------------------------------
 
