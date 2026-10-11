@@ -206,20 +206,33 @@ pandoc -o README.html README.md
 ### 21: Explore the MultiQC report
 
 *Answer* (one insight you gained):
+I noticed that MultiQC provides a lot of information in one report. I found it very useful that you can explore specific results by selecting samples or hovering over the graphs. You can also see information about the nucleotide base composition of the sequences.
 
 *Answer* (one thing you're confused about):
+There is to much information in the report, and some concepts are new to me. For example, I do not fully understand what Sequence duplication levels and Adapter Content mean or how to interpret those results.
 
 ### 22: Pandoc versions
 
 ```bash
-# Your command:
+pandoc -v
+module spider pandoc
+module load pandoc/3.6.4
+pandoc -v
 ```
 
 The output of the command(s) was:
 
-```         
+```   
+Default Pandoc version 2.14.0.3
+
+Available OSC modules:
+pandoc/2.19.2
+pandoc/3.6.4
+
+Pandoc version after loading the module: 3.6.4     
 ```
 
 *Answer*: Is the Pandoc version available by default the most recent one?
-
+No. The default Pandoc version on OSC is 2.14.0.3.
 *Answer*: Which Pandoc version are you using after loading the module?
+After loading the pandoc/3.6.4 module, I am using Pandoc version 3.6.4,
