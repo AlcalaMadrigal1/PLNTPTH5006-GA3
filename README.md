@@ -150,7 +150,7 @@ bash scripts/multiqc.sh results/fastqc results/multiqc
 
 ### 13: Differences between the two MultiQC runs
 
-*Answer*:
+*Answer*: Both runs found 44 FastQC reports. However, the output file names changed in the second run because files with the same names already existed. 
 
 ------------------------------------------------------------------------
 
@@ -158,9 +158,9 @@ bash scripts/multiqc.sh results/fastqc results/multiqc
 
 ### 14: The structure of the Pandoc command
 
-*Answer* (options and arguments, and what each does):
+*Answer* (options and arguments, and what each does):pandoc is the program, -o is the option to specify the output file, README.pdf is the output file, and README.md is the input file.
 
-*Answer* (how does Pandoc know which output format to produce?):
+*Answer* (how does Pandoc know which output format to produce?):Pandoc knows the output format from the file extension. For example .pdf tells Pandoc to create a PDF file.
 
 ### 15: Render your README to PDF and HTML
 
@@ -171,16 +171,16 @@ pandoc -o README.pdf README.md
 - Command to render to HTML:
 
 ```bash
-# Your command:
+pandoc -o README.html README.md
 ```
 
 ### 16: Should the rendered files be committed?
 
-*Answer*: Should the rendered files be committed to your Git repo? Why/why not?
+*Answer*: Should the rendered files be committed to your Git repo? Why/why not? No, because we can generate the PDF and HTML files again from README.md using Pandoc. It would only be necessary to include them if we wanted to make these formats available for download.
 
 ### 17: Install the PDF Viewer extension and view the PDF
 
-*Answer*: One observation about the rendered PDF file:
+*Answer*: One observation about the rendered PDF file:I think the format is clear and easy to understand, and I like how the information is presented. However, I noticed that my name was not displayed, which helped me realize that I need to correct it in my README file.
 
 ## Part E: Publish your repo on GitHub
 
